@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {
-                sh 'docker build -t navapp786/nodeapp:$BUILD_NUMBER .'
+                sh 'docker build -t naveenpython/nodeapp:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push navapp786/nodeapp:$BUILD_NUMBER'
+                sh 'docker push naveenpython/nodeapp:$BUILD_NUMBER'
             }
         }
 }
